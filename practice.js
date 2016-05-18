@@ -71,3 +71,4 @@ $(document).ready(function(){
     $(".newButton2").append(button2)
 	//12. Create a counter that displays the length of the list.
 	
+});
