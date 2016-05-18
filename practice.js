@@ -16,7 +16,7 @@ $(document).ready(function(){
 	
 //4. Make 'hangry' red and 'content' green	
 	$("td:contains('Hangry')").css('color', 'red');
-    $('td:contains("Content")').css('color', 'green');	
+	$('td:contains("Content")').css('color', 'green');	
 	
 // 5.When clicked, only display cats weighing 10+ lbs	
 	var catRows = $('#catTable tr');
@@ -48,21 +48,20 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 	
-	//9.Select the third option from the dropdown, and append it to the page. Try using .find() here.
-	///???? Not Right	
-	var content = $("#dropdown").find('option:nth-child(2)');
-		$(("<h3>")+ content +("</h3>")).insertAfter( "#checkbox option:last" );
+//9.Select the third option from the dropdown, and append it to the page. Try using .find() here.
+	
+	var content = $(".dropdown").find('option:nth-child(2)').text();
+		$(("<h3>")+ content +("</h3>")).insertAfter( "body" );
 		
 	
-	//10. Alert the user how many items are in the list. Let's iterate over those children again. 
-	//Try using a counter with this one.
+//10. Alert the user how many items are in the list. Let's iterate over those children again. 
+
 	
 	
-	//11. Create buttons that add and remove list items.
-	///Not done....			
+//11. Create buttons that add and remove list items.
+		
 	var button = $('<button>Add List Items</button>').click(function () {
-         $('ul li').add();
-    });
+         $('ul li').add();});
     $(".newButton1").append(button);
 	
 	var button2 = $('<button>Remove List Items</button>').click(function () {
