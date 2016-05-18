@@ -6,7 +6,8 @@ $(document).ready(function(){
     });
 	
 //2. When the checkbox is clicked, reveal the hidden message...	
-	$("input:checkbox").click(function() {
+	$(".chex").find("input").click(function() {
+		console.log(this)
 		$("h2").toggleClass("hidden");
 	});
 
@@ -16,7 +17,7 @@ $(document).ready(function(){
 	
 //4. Make 'hangry' red and 'content' green	
 	$("td:contains('Hangry')").css('color', 'red');
-	$('td:contains("Content")').css('color', 'green');	
+    $('td:contains("Content")').css('color', 'green');	
 	
 // 5.When clicked, only display cats weighing 10+ lbs	
 	var catRows = $('#catTable tr');
@@ -36,7 +37,7 @@ $(document).ready(function(){
 	
 //8.Disable the input field, the checkbox, and the link to Google.
 // .prop() will come in handy for the first one. Then, check out .preventDefault() for the link	
-	$("input").prop("disabled",true);
+	$(".textBoxUnusable").prop("disabled",true);
 	
 	
 	$('#chkToBePrevented').click(function(){
@@ -48,27 +49,31 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 	
-//9.Select the third option from the dropdown, and append it to the page. Try using .find() here.
+	//9.Select the third option from the dropdown, and append it to the page. Try using .find() here.
 	
 	var content = $(".dropdown").find('option:nth-child(3)').text();
 		$(("<h3>")+ content +("</h3>")).insertAfter(".dropdown");
 
-		
-	
-//10. Alert the user how many items are in the list. Let's iterate over those children again. 
 
-	
-	
-//11. Create buttons that add and remove list items.
+
 		
+	
+	//10. Alert the user how many items are in the list. Let's iterate over those children again. 
+	//Try using a counter with this one.
+	
+	
+	//11. Create buttons that add and remove list items.
+	///Not done....			
 	var button = $('<button>Add List Items</button>').click(function () {
-         $('ul li').add();});
+         $('ul li').add();
+    });
     $(".newButton1").append(button);
 	
 	var button2 = $('<button>Remove List Items</button>').click(function () {
          $('ul li').add();
     });
-    $(".newButton2").append(button2)
+    $(".newButton2").append(button2);
+
+});
 	//12. Create a counter that displays the length of the list.
 	
-});
