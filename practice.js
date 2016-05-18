@@ -50,8 +50,9 @@ $(document).ready(function(){
 	
 //9.Select the third option from the dropdown, and append it to the page. Try using .find() here.
 	
-	var content = $(".dropdown").find('option:nth-child(2)').text();
-		$(("<h3>")+ content +("</h3>")).insertAfter( "body" );
+	var content = $(".dropdown").find('option:nth-child(3)').text();
+		$(("<h3>")+ content +("</h3>")).insertAfter(".dropdown");
+
 		
 	
 //10. Alert the user how many items are in the list. Let's iterate over those children again. 
